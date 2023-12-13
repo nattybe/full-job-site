@@ -3,7 +3,7 @@ import {Job} from "./models/Job";
 export default async function getFromDB() {
   const dbString = process.env.DB_STRING;
   try {
-    await mongoose.connect(dbString, {
+    await mongoose.connect(dbString||" ", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
