@@ -11,7 +11,7 @@ export default async function getFromDB() {
     const jobs = await Job.find({}).limit(5);
     console.log(jobs?.length);
     return jobs;
-  } catch (error) {
+  } catch (error:any) {
     console.error("from getFromBD: "+error.message);
   }
 }
