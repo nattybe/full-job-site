@@ -1,6 +1,6 @@
 import getFromDB from "@/lib/getFromDB";
 
-const GradientCard = (param) => {
+const GradientCard = (param:any) => {
     const job=param.job;
   return (
     <div className="max-w-md mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg overflow-hidden shadow-lg">
