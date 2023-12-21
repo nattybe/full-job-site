@@ -1,0 +1,21 @@
+.btn-shadow {
+  box-shadow: -1px 1px 1px 0 var(--accent);
+}
+@keyframes rotatingShadow {
+  0% {
+    box-shadow: -1px 1px 10px 0 var(--accent);
+  }
+  30% {
+    box-shadow: 0px 1px 10px 0 var(--accent);
+  }
+  60% {
+    box-shadow: 1px 1px 10px 0 var(--accent);
+  }
+  100% {
+    box-shadow: 0px -1px 10px 0 var(--accent);
+  }
+}
+
+.btn-shadow:hover {
+  box-shadow: -0.8px 1px 10px 0 var(--accent);
+}

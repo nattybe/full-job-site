@@ -1,0 +1,14 @@
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 5px rgba(0, 255, 0, 0.5),
+      0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    box-shadow: 20px 0 5px rgba(255, 0, 0, 0.5), 20px 0 5px rgba(0, 255, 0, 0.5),
+      20px 0 5px rgba(0, 0, 255, 0.5);
+  }
+}
+
+.glow:hover {
+  animation: glowing 1.5s infinite;
+}

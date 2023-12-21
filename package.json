@@ -9,6 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "github:fortawesome/react-fontawesome",
+    "@heroicons/react": "^2.1.1",
+    "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
+    "fortawesome": "^0.0.1-security",
     "mongoose": "^8.0.3",
     "next": "14.0.4",
     "react": "^18",
