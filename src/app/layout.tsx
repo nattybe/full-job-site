@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
+import { SearchProvider } from "../context/jobsContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-background ${inter.className}`}>
-        <Header />
-        <div className="md:flex">
-          <NavBar />
-          {children}
-        </div>
-        <Footer />
+        <SearchProvider>
+          <Header />
+          <div className="md:flex">
+            <NavBar />
+            {children}
+          </div>
+          <Footer />
+        </SearchProvider>
       </body>
     </html>
   );

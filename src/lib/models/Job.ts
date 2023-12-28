@@ -12,8 +12,9 @@ const jobSchema = new Schema({
   date: String,
   from: String,
   content: String,
+  internal:Boolean,
   image_url: String,
   all_content: String,
 });
 
-export const Job= mongoose.models.Job || mongoose.model("Job",jobSchema);
+export const Job= mongoose.models?.Job || mongoose.model("Job",jobSchema);

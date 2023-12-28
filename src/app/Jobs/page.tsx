@@ -1,3 +1,7 @@
+import SingleItem from "@/components/item";
+import JobsContainer from "@/components/jobsContainer";
+import SearchBar from "@/components/searchBar";
+import { SearchProvider } from "@/context/jobsContext";
 import getFromDB from "@/lib/getFromDB";
 
 const GradientCard = (param:any) => {
@@ -23,17 +27,17 @@ const GradientCard = (param:any) => {
   );
 };
 export default async function Jobs() {
-  const jobs = await getFromDB();
-  const content=jobs?.map(job=>{
-    console.log(job);
-    return(
-      <GradientCard job={job} key={job.id}/>
-    )
-  })
+  // const jobs = await getFromDB();
+  // const content=jobs?.map(job=>{
+  //   console.log(job);
+  //   return <SingleItem job={job} key={job.id} />;
+  // })
   return (
-    <div className="flex items-center justify-between min-h-screen">
-      <h1>Got {jobs?.length} of em</h1>
-      {content}
-    </div>
+    <>
+      <main className="py-4">
+        <SearchBar />
+        <JobsContainer />
+      </main>
+    </>
   );
 }
